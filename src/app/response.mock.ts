@@ -1,4 +1,4 @@
-import { Tree } from "./interfaces";
+import { Tree } from "./tree-select/interfaces";
 
 export const RESPONSE: Tree =
 {

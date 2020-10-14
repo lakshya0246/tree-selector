@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Tree } from '../interfaces';
+import { Tree } from './interfaces';
 
 @Component({
   selector: 'app-tree-select',
@@ -14,7 +14,9 @@ export class TreeSelectComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    if(!this.tree) console.warn("The tree select component requires an input 'tree' to function.")
+  }
 
   onSelect(value: string[]) {
     this.selectIsOpen = false;
