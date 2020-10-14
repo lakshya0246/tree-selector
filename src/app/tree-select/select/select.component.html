@@ -5,6 +5,7 @@
 
     <ul class="level-entries">
         <ng-container *ngFor="let entry of tree.entries; index as i">
+            <!-- If the entry is an edge node emit on click, otherwise show app-select on click -->
             <li
                 *ngIf="entry.child; else edgeNode"
                 (click)="showChildIndex = i"
