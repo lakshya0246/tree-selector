@@ -1,0 +1,4 @@
+<button (click)="selectIsOpen = !selectIsOpen" class="btn">
+    Select location
+</button>
+<app-select *ngIf="selectIsOpen" (selected)="onSelect($event)" [tree]='tree'></app-select>

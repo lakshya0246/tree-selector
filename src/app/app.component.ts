@@ -9,5 +9,4 @@ import { RESPONSE } from './response.mock';
 export class AppComponent {
   selected: string[];
   locations = RESPONSE;
-  toggle: boolean;
 }

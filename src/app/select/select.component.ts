@@ -9,7 +9,7 @@ import { Tree } from '../interfaces';
 export class SelectComponent implements OnInit {
 
   @Input() tree: Tree;
-  @Output() selected = new EventEmitter<any>();
+  @Output() selected = new EventEmitter<string[]>();
   showChildIndex: number;
 
   constructor() { }

@@ -3,9 +3,5 @@
     Tree selector
   </h1>
   {{selected | json}}
-  <br>
-  <button (click)="toggle = !toggle" class="btn">
-    Select location
-  </button>
-  <app-select *ngIf="toggle" (selected)="selected = $event; toggle = false" [tree]='locations'></app-select>
+  <app-tree-select [tree]="locations" (selected)="this.selected = $event"></app-tree-select>
 </div>
