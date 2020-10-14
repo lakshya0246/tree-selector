@@ -1,0 +1,10 @@
+{{tree.levelName}}
+<ul>
+    <li *ngFor="let entry of tree.entries">
+        {{entry.name}}
+        <ng-container *ngIf="entry.children">
+            {{entry.children | json}}
+            <app-select [tree]="child" *ngFor="let child of entry.children"></app-select>
+        </ng-container>
+    </li>
+</ul>
