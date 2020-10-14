@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Tree } from '../interfaces';
 
 @Component({
@@ -9,9 +9,21 @@ import { Tree } from '../interfaces';
 export class SelectComponent implements OnInit {
 
   @Input() tree: Tree;
-
-  constructor() { }
+  @Output() selected = new EventEmitter<any>();
+  showChildrenBoolean: boolean;
+  constructor(
+    private el: ElementRef
+  ) { }
 
   ngOnInit(): void { }
+
+  showChildOrSelect(i) {
+
+  }
+
+  onSelect(childValue: string[], value: string) {
+    this.el.nativeElement.style.display = 'none';
+    this.selected.emit([value, ...childValue])
+  }
 
 }

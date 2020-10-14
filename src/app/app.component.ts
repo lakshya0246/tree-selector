@@ -7,6 +7,7 @@ import { RESPONSE } from './response.mock';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  selected: string;
+  selected: string[];
   locations = RESPONSE;
+  toggle: boolean;
 }

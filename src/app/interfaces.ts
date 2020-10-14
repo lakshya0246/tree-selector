@@ -6,5 +6,5 @@ export interface Tree {
 export interface Entry {
     id: number;
     name: string;
-    children: Tree[]
+    child: Tree
 }
