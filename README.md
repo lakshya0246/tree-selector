@@ -6,6 +6,7 @@ This project showcases a component (`app-tree-select`) for selecting data from n
 ## Development server
 - Install angular CLI, `npm install -g @angular/cli`,
 - Clone the repo using the url `https://github.com/lakshya0246/tree-selector.git`
+- Install npm packages, run `npm install`. You need to have Node.js installed.
 - To view the demo, run `ng serve` for a dev server from the base folder, and navigate to `http://localhost:4200/`.
 
 
