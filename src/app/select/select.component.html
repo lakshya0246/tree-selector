@@ -2,16 +2,27 @@
     <h4 class="level-name">
         {{tree.levelName | titlecase}}
     </h4>
+
     <ul class="level-entries">
         <ng-container *ngFor="let entry of tree.entries; index as i">
-            <li *ngIf="entry.child; else edgeNode" class="level-entry">
+            <li
+                *ngIf="entry.child; else edgeNode"
+                (click)="showChild = true"
+                class="level-entry">
                 {{entry.name}}
                 <i class="material-icons icon-expandable">keyboard_arrow_right</i>
-                <app-select (selected)="onSelect($event, entry.name)" [tree]="entry.child"></app-select>
-
+                
+                <app-select
+                    *ngIf="showChild"
+                    (selected)="onSelect($event, entry.name)"
+                    [tree]="entry.child">
+                </app-select>
             </li>
+
             <ng-template #edgeNode>
-                <li (click)="selected.emit([entry.name])" class="level-entry">
+                <li 
+                    (click)="selected.emit([entry.name])"
+                    class="level-entry">
                     {{entry.name}}
                 </li>
             </ng-template>
