@@ -2,6 +2,9 @@
   <h1>
     Tree selector
   </h1>
-  {{selected | json}}
+  <div class="selection-display">
+    Selected:
+    {{selected | json}}
+  </div>
   <app-tree-select [tree]="locations" (selected)="this.selected = $event"></app-tree-select>
 </div>

@@ -1,4 +1,5 @@
-<button (click)="selectIsOpen = !selectIsOpen" class="btn">
+<button [ngClass]="{'open': selectIsOpen}" (click)="selectIsOpen = !selectIsOpen" class="btn select">
     Select location
+    <i class="material-icons">keyboard_arrow_down</i>
 </button>
 <app-select *ngIf="selectIsOpen" (selected)="onSelect($event)" [tree]='tree'></app-select>

@@ -6,7 +6,7 @@ export const RESPONSE: Tree =
     entries: [
         { id: 1, name: "SNN Greenbay", child: undefined },
         {
-            id: 2, name: "CNN Greenbay", child:
+            id: 2, name: "ABC Apartments", child:
             {
                 levelName: 'zone',
                 entries: [
@@ -50,7 +50,7 @@ export const RESPONSE: Tree =
             },
         },
         {
-            id: 2, name: "DNN Greenbay", child:
+            id: 2, name: "XYZ Greenbay", child:
             {
                 levelName: 'zone',
                 entries: [
@@ -91,16 +91,54 @@ export const RESPONSE: Tree =
                         }
                     },
                     {
-                        id: 3, name: 'North', child:
+                        id: 3, name: 'East', child:
                         {
                             levelName: 'building',
                             entries: [
                                 {
                                     id: 6,
-                                    name: 'A',
+                                    name: 'D',
                                     child: {
                                         levelName: 'floor',
                                         entries: [
+                                            {
+                                                id: 6,
+                                                name: '1',
+                                                child: {
+                                                    levelName: 'room',
+                                                    entries: [
+                                                        {
+                                                            id: 6,
+                                                            name: 'Bedroom',
+                                                            child: undefined
+                                                        },
+                                                        {
+                                                            id: 6,
+                                                            name: 'Living',
+                                                            child: undefined,
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                id: 6,
+                                                name: '2',
+                                                child: {
+                                                    levelName: 'room',
+                                                    entries: [
+                                                        {
+                                                            id: 6,
+                                                            name: 'Bedroom',
+                                                            child: undefined
+                                                        },
+                                                        {
+                                                            id: 6,
+                                                            name: 'Living',
+                                                            child: undefined,
+                                                        }
+                                                    ]
+                                                }
+                                            },
                                             {
                                                 id: 6,
                                                 name: '3',
@@ -114,7 +152,35 @@ export const RESPONSE: Tree =
                                                         },
                                                         {
                                                             id: 6,
-                                                            name: 'Kitchen',
+                                                            name: 'Living',
+                                                            child: undefined,
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    id: 6,
+                                    name: 'F',
+                                    child: {
+                                        levelName: 'floor',
+                                        entries: [
+                                            {
+                                                id: 6,
+                                                name: '3',
+                                                child: {
+                                                    levelName: 'room',
+                                                    entries: [
+                                                        {
+                                                            id: 6,
+                                                            name: 'Drawing',
+                                                            child: undefined
+                                                        },
+                                                        {
+                                                            id: 6,
+                                                            name: 'Study',
                                                             child: undefined,
                                                         }
                                                     ]

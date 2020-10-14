@@ -1,0 +1,46 @@
+:host {
+    display: block;
+    position: relative;
+}
+
+.btn.select {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 16px;
+    color: white;
+    font-weight: 500;
+    background: var(--primary);
+
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 7px;
+
+    &:focus,
+    &.open {
+        outline: none;
+        background: var(--primary-light);
+    }
+}
+
+.btn.select i.material-icons {
+    margin-left: 8px;
+    opacity: 0.7;
+    color: white;
+    transition: transform 200ms;
+}
+
+.btn.select.open i.material-icons {
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+app-select {
+    z-index: 10;
+    position: absolute;
+    left: 16px;
+    top: 44px;
+}
