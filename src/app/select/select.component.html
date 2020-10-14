@@ -7,13 +7,13 @@
         <ng-container *ngFor="let entry of tree.entries; index as i">
             <li
                 *ngIf="entry.child; else edgeNode"
-                (click)="showChild = true"
+                (click)="showChildIndex = i"
                 class="level-entry">
                 {{entry.name}}
                 <i class="material-icons icon-expandable">keyboard_arrow_right</i>
                 
                 <app-select
-                    *ngIf="showChild"
+                    *ngIf="showChildIndex === i"
                     (selected)="onSelect($event, entry.name)"
                     [tree]="entry.child">
                 </app-select>

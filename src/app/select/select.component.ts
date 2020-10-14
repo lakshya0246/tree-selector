@@ -10,14 +10,14 @@ export class SelectComponent implements OnInit {
 
   @Input() tree: Tree;
   @Output() selected = new EventEmitter<any>();
-  showChild: boolean;
+  showChildIndex: number;
 
   constructor() { }
 
   ngOnInit(): void { }
 
   onSelect(childValue: string[], value: string) {
-    this.showChild = false;
+    this.showChildIndex = undefined;
     this.selected.emit([value, ...childValue])
   }
 }
