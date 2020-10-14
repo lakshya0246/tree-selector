@@ -1,3 +1,64 @@
 :host {
-    display: block;
+    display: flex;
+}
+
+.level {
+    --border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.level-name {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 8px 8px 6px 8px;
+    letter-spacing: 0.6px;
+    color: var(--grey-4);
+}
+
+.level-entries {
+    appearance: none;
+    margin: 0;
+    padding: 0;
+}
+
+.level-entry {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    color: var(--grey-8);
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    transition: background 200ms;
+
+    &:first-child {
+        padding-top: 6px;
+    }
+
+    &:last-child {
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+
+    &:hover {
+        background: var(--primary-light-50);
+    }
+
+    &:active {
+        background: var(--primary-light);
+    }
+}
+
+.level-entry .icon-expandable {
+    color: var(--grey-5);
+    margin-left: 4px;
+    font-size: 20px;
+}
+
+.level-entry app-select {
+    display: none;
 }

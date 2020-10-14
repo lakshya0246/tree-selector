@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/normalize.scss";
+@import "./assets/styles/colors.scss";
+
+:root {
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body,
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+.btn {
+    font-family: var(--font-family);
+}
